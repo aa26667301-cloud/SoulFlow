@@ -1,0 +1,14 @@
+[
+  {"id":"box_breathing","axis":"mind","title":"方形呼吸","minutes":3,"tags":["overload","focus"],"steps":["舒服坐好","吸氣 4 拍","停留 4 拍","吐氣 4 拍","停留 4 拍，重複數輪"],"note":"若呼吸練習讓你不舒服，立即停止並恢復自然呼吸。"},
+  {"id":"brain_dump","axis":"mind","title":"三分鐘腦內清空","minutes":3,"tags":["overload","rumination"],"steps":["拿紙或記事 App","把腦中正在想的事全部寫下","不分類、不評價","最後只圈出今天真正要處理的一件事"]},
+  {"id":"five_senses","axis":"mind","title":"五感定位","minutes":4,"tags":["grounding","overload"],"steps":["找出 5 個看得到的東西","4 個摸得到的觸感","3 個聽得到的聲音","2 個聞得到的氣味","1 個當下最明顯的感受"]},
+  {"id":"gentle_stretch","axis":"body","title":"溫和伸展","minutes":5,"tags":["tension","fatigue"],"steps":["轉動肩膀","放鬆下巴","輕柔伸展頸肩與手臂","過程保持自然呼吸","任何疼痛都不要硬撐"]},
+  {"id":"water_break","axis":"body","title":"補水與離席","minutes":5,"tags":["fatigue","reset"],"steps":["離開螢幕","喝一杯水","慢慢走動 2–3 分鐘","回來前觀察身體有沒有比較鬆"]},
+  {"id":"body_scan","axis":"body","title":"身體掃描","minutes":6,"tags":["tension","awareness"],"steps":["從額頭開始注意身體感受","依序到下巴、肩膀、胸口、腹部、腿、腳","只觀察，不急著改變","發現緊繃時允許那個部位稍微放鬆"]},
+  {"id":"micro_rest","axis":"body","title":"十分鐘微休息","minutes":10,"tags":["fatigue","sleepy"],"steps":["把通知暫時關閉","找安全舒服的位置坐著或躺著","不要求自己睡著","十分鐘後再決定下一步"]},
+  {"id":"values_check","axis":"spirit","title":"價值觀對焦","minutes":8,"tags":["meaning","direction"],"steps":["寫下最近最耗能的一件事","問自己：我在守護什麼？","再問：這件事和我重視的價值一致嗎？","寫下一個更貼近價值的小調整"]},
+  {"id":"gratitude_three","axis":"spirit","title":"三件真實感謝","minutes":5,"tags":["connection","meaning"],"steps":["寫下今天三件值得感謝的小事","每一件補上一句為什麼","不強迫正向，只寫真實感受"]},
+  {"id":"intention_setting","axis":"spirit","title":"今日意圖","minutes":3,"tags":["direction","reset"],"steps":["完成句子：今天我想帶著＿＿＿做事","選一個具體行為支持這個意圖","晚上回看是否有做到一小部分"]},
+  {"id":"symbolic_reflection","axis":"spirit","title":"象徵式反思","minutes":8,"tags":["creativity","meaning"],"steps":["選一個此刻吸引你的顏色、物件或圖像","寫下它讓你想到什麼","把聯想當成自我探索素材，不把它當成預言","找出一個你願意帶走的提醒"]},
+  {"id":"quiet_walk","axis":"spirit","title":"安靜散步","minutes":10,"tags":["connection","reset"],"steps":["找安全熟悉的路線","不聽節目或滑手機","注意步伐、風、聲音與周圍環境","回來後寫下一句剛才最清楚的感受"]}
+]
