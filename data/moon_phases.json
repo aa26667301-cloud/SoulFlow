@@ -1,0 +1,10 @@
+[
+  {"id":"new_moon","zh_name":"新月","en_name":"New Moon","themes":["intention","beginning","clarity"],"reflection_prompt":"如果不急著一次完成，我真正想開始的是什麼？","micro_action":"寫下一個未來 7 天可完成的最小起步行動。"},
+  {"id":"waxing_crescent","zh_name":"眉月","en_name":"Waxing Crescent","themes":["nurture","commitment","momentum"],"reflection_prompt":"什麼正在成形，需要我多給一點時間或資源？","micro_action":"選一件正在進行的事，補上一個具體資源或時間區塊。"},
+  {"id":"first_quarter","zh_name":"上弦月","en_name":"First Quarter","themes":["decision","friction","agency"],"reflection_prompt":"現在真正需要我做決定的是哪一件事？","micro_action":"把一個卡住的選擇寫成 A/B 兩個可執行方案。"},
+  {"id":"waxing_gibbous","zh_name":"盈凸月","en_name":"Waxing Gibbous","themes":["refine","practice","focus"],"reflection_prompt":"我已經做得不錯的部分是什麼？哪裡只需要微調？","micro_action":"保留一件有效做法，刪掉一個多餘步驟。"},
+  {"id":"full_moon","zh_name":"滿月","en_name":"Full Moon","themes":["review","visibility","gratitude"],"reflection_prompt":"如果把成果攤開來看，我最想承認自己的哪一份努力？","micro_action":"記下三個已完成或正在改善的具體證據。"},
+  {"id":"waning_gibbous","zh_name":"虧凸月","en_name":"Waning Gibbous","themes":["share","integrate","meaning"],"reflection_prompt":"這段經驗教會我的一件事，可以怎麼帶進下一步？","micro_action":"用三句話寫下：發生了什麼、我學到什麼、我要保留什麼。"},
+  {"id":"last_quarter","zh_name":"下弦月","en_name":"Last Quarter","themes":["release","boundaries","simplify"],"reflection_prompt":"有哪些責任、做法或期待其實已經不需要繼續？","micro_action":"選一件可以停止、委派或降低標準的事。"},
+  {"id":"waning_crescent","zh_name":"殘月","en_name":"Waning Crescent","themes":["rest","closure","reflection"],"reflection_prompt":"在下一次開始以前，我需要先恢復什麼？","micro_action":"安排 10 分鐘無輸入時間，不滑手機、不處理待辦。"}
+]

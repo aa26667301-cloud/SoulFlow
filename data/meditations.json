@@ -1,0 +1,10 @@
+[
+  {"id":"grounding_5","title":"五感落地","themes":["grounding","overload"],"min_minutes":3,"max_minutes":10,"steps":["找一個舒服且安全的位置。","依序注意看見、聽見、觸碰到的事物。","讓呼吸維持自然，不要求變慢。","最後用一句話描述此刻最明顯的感受。"]},
+  {"id":"natural_breath","title":"自然呼吸觀察","themes":["calm","focus","rest"],"min_minutes":3,"max_minutes":15,"steps":["坐好或躺好。","只注意呼吸進出，不刻意憋氣。","走神時只標記『想到事情了』，再回到呼吸。","如果頭暈或不舒服，立刻恢復平常活動。"]},
+  {"id":"body_scan","title":"溫和身體掃描","themes":["body","tension","rest"],"min_minutes":5,"max_minutes":20,"steps":["從額頭開始注意身體感受。","慢慢移到下巴、肩膀、胸口、腹部、腿和腳。","只觀察，不要求任何部位一定放鬆。","疼痛或不舒服時停止。"]},
+  {"id":"focus_anchor","title":"專注錨點","themes":["focus","work","study"],"min_minutes":4,"max_minutes":12,"steps":["選一個中性錨點，例如呼吸、環境聲音或手掌觸感。","每次走神時溫和回到錨點。","結束前寫下下一個要做的單一步驟。"]},
+  {"id":"self_kindness","title":"自我友善片刻","themes":["self_compassion","relationship","repair"],"min_minutes":5,"max_minutes":15,"steps":["想起最近一件讓自己挫折的小事。","用對朋友說話的語氣描述它。","分開『事實』與『對自己的批評』。","選一句更精確、較不傷害自己的描述。"]},
+  {"id":"transition_pause","title":"轉換緩衝","themes":["transition","change","closure"],"min_minutes":5,"max_minutes":15,"steps":["先把上一件事寫成一句結束句。","做一分鐘安靜停留或自然呼吸。","寫下下一段時間只需要完成的一個目標。","再開始新的活動。"]},
+  {"id":"quiet_listening","title":"安靜聆聽","themes":["reflection","meaning","calm"],"min_minutes":5,"max_minutes":20,"steps":["關閉非必要通知。","注意環境裡最近、最遠、最持續的三種聲音。","不評價聲音好壞。","最後寫下一句剛才浮現的想法。"]},
+  {"id":"walking_awareness","title":"步行覺察","themes":["grounding","energy","reset"],"min_minutes":5,"max_minutes":30,"steps":["選安全熟悉的路線。","注意腳步、風、溫度與視線。","不要邊走邊看螢幕。","回來後寫一句身體或情緒變化。"]}
+]

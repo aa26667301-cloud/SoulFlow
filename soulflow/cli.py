@@ -4,9 +4,16 @@ import argparse
 import json
 
 from .crystals import build_ritual, reflection_card, recommend_crystals
+from .dreams import dream_reflection
 from .engine import CheckIn, load_practices, recommend, summarize
 from .journal import generate_prompts
+from .meditation import meditation_session, recommend_meditations
+from .moon import moon_cycle, moon_reflection
 from .safety import needs_safety_redirect, safety_message
+
+
+def _print(data) -> None:
+    print(json.dumps(data, ensure_ascii=False, indent=2))
 
 
 def cmd_checkin(args: argparse.Namespace) -> None:
@@ -14,8 +21,7 @@ def cmd_checkin(args: argparse.Namespace) -> None:
         print(safety_message())
         return
     checkin = CheckIn(args.mind, args.body, args.spirit, args.note)
-    output = {"summary": summarize(checkin), "recommendations": [r.to_dict() for r in recommend(checkin)]}
-    print(json.dumps(output, ensure_ascii=False, indent=2))
+    _print({"summary": summarize(checkin), "recommendations": [r.to_dict() for r in recommend(checkin)]})
 
 
 def cmd_journal(args: argparse.Namespace) -> None:
@@ -35,22 +41,56 @@ def cmd_crystals(args: argparse.Namespace) -> None:
     if needs_safety_redirect(args.theme):
         print(safety_message())
         return
-    result = [item.to_dict() for item in recommend_crystals(args.theme, args.limit)]
-    print(json.dumps(result, ensure_ascii=False, indent=2))
+    _print([item.to_dict() for item in recommend_crystals(args.theme, args.limit)])
 
 
 def cmd_crystal_card(args: argparse.Namespace) -> None:
     if needs_safety_redirect(args.theme):
         print(safety_message())
         return
-    print(json.dumps(reflection_card(args.theme, args.crystal), ensure_ascii=False, indent=2))
+    _print(reflection_card(args.theme, args.crystal))
 
 
 def cmd_ritual(args: argparse.Namespace) -> None:
     if needs_safety_redirect(args.theme):
         print(safety_message())
         return
-    print(json.dumps(build_ritual(args.theme, args.minutes, args.crystal), ensure_ascii=False, indent=2))
+    _print(build_ritual(args.theme, args.minutes, args.crystal))
+
+
+def cmd_moon(args: argparse.Namespace) -> None:
+    if needs_safety_redirect(args.theme):
+        print(safety_message())
+        return
+    _print(moon_reflection(args.phase, args.theme))
+
+
+def cmd_moon_cycle(args: argparse.Namespace) -> None:
+    if needs_safety_redirect(args.theme):
+        print(safety_message())
+        return
+    _print(moon_cycle(args.theme))
+
+
+def cmd_dream(args: argparse.Namespace) -> None:
+    if needs_safety_redirect(args.text):
+        print(safety_message())
+        return
+    _print(dream_reflection(args.text, args.limit))
+
+
+def cmd_meditations(args: argparse.Namespace) -> None:
+    if needs_safety_redirect(args.theme):
+        print(safety_message())
+        return
+    _print(recommend_meditations(args.theme, args.minutes, args.limit))
+
+
+def cmd_meditate(args: argparse.Namespace) -> None:
+    if needs_safety_redirect(args.theme):
+        print(safety_message())
+        return
+    _print(meditation_session(args.theme, args.minutes, args.practice))
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -79,14 +119,40 @@ def build_parser() -> argparse.ArgumentParser:
 
     card = sub.add_parser("crystal-card", help="產生一張水晶象徵反思卡")
     card.add_argument("--theme", required=True)
-    card.add_argument("--crystal", default=None, help="水晶 id、中文名或英文名")
+    card.add_argument("--crystal", default=None)
     card.set_defaults(func=cmd_crystal_card)
 
     ritual = sub.add_parser("ritual", help="產生 5–30 分鐘的象徵式自我反思流程")
     ritual.add_argument("--theme", required=True)
     ritual.add_argument("--minutes", type=int, default=10)
-    ritual.add_argument("--crystal", default=None, help="可指定水晶；未指定則由主題推薦")
+    ritual.add_argument("--crystal", default=None)
     ritual.set_defaults(func=cmd_ritual)
+
+    moon = sub.add_parser("moon", help="以指定月相做象徵式反思")
+    moon.add_argument("--phase", required=True, help="例如 新月、滿月、full_moon")
+    moon.add_argument("--theme", default="")
+    moon.set_defaults(func=cmd_moon)
+
+    cycle = sub.add_parser("moon-cycle", help="建立八階段月相反思模板")
+    cycle.add_argument("--theme", default="")
+    cycle.set_defaults(func=cmd_moon_cycle)
+
+    dream = sub.add_parser("dream", help="整理夢境主題與反思問題")
+    dream.add_argument("--text", required=True)
+    dream.add_argument("--limit", type=int, default=5)
+    dream.set_defaults(func=cmd_dream)
+
+    meditations = sub.add_parser("meditations", help="依主題推薦一般性冥想練習")
+    meditations.add_argument("--theme", default="")
+    meditations.add_argument("--minutes", type=int, default=10)
+    meditations.add_argument("--limit", type=int, default=3)
+    meditations.set_defaults(func=cmd_meditations)
+
+    meditate = sub.add_parser("meditate", help="建立一段低風險冥想流程")
+    meditate.add_argument("--theme", default="")
+    meditate.add_argument("--minutes", type=int, default=10)
+    meditate.add_argument("--practice", default=None)
+    meditate.set_defaults(func=cmd_meditate)
     return parser
 
 

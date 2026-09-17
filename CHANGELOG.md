@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.3.0 - 2026-09-17
+
+- 新增 OpenMoon 月相象徵反思模組
+- 新增 8 階段月相資料與 `moon` / `moon-cycle` CLI
+- 新增 OpenDream 夢境日誌模組
+- 新增 deterministic 夢境主題標籤與 `dream` CLI
+- 新增 OpenMeditation 一般性冥想工作流
+- 新增 8 種低風險覺察練習與 `meditations` / `meditate` CLI
+- 新增 3 組 AI Skills
+- 新增 7 項模組測試
+- 保留非預測、非診斷、可自主停止的安全邊界
+
 ## 0.2.0 - 2026-09-17
 
 - 新增 OpenCrystal 水晶象徵反思模組
